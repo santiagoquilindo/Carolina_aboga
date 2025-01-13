@@ -196,14 +196,14 @@ footer p {
 
 /* Estilo de los enlaces del Footer */
 footer a {
-    color: blue; /* Color azul */
+    color: white; /* Color blanco*/
     text-decoration: none;
     font-weight: bold; /* Resalta los enlaces */
     transition: color 0.3s ease; /* Efecto suave al pasar el cursor */
 }
 
 footer a:hover {
-    color: white; /* Cambia a blanco al pasar el cursor */
+    color: blue; /* Cambia a blanco al pasar el cursor */
     text-decoration: underline; /* Subrayado al pasar el cursor */
 }
 

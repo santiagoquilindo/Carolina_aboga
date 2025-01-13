@@ -93,7 +93,7 @@
     border-radius: 50%;
     transition: transform 0.3s, box-shadow 0.3s; /* Suaviza los efectos */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra para destacar */
-    background-color: #25d366; /* Fondo verde para hacerlo más atractivo */
+    background-color: white; /* Fondo verde para hacerlo más atractivo */
 }
 
 .whatsapp-icon img:hover {
@@ -104,10 +104,50 @@
 
 /* Footer */
 footer {
-    background-color: black;
-    color: gold;
-    text-align: center;
-    padding: 20px;
+    background-color: black; /* Fondo negro */
+    color: gold; /* Texto en dorado */
+    text-align: center; /* Centrado del contenido */
+    padding: 20px 15px; /* Espaciado interno */
+    font-family: 'Arial', sans-serif; /* Fuente estándar */
+    font-size: 1.1em; /* Tamaño de texto un poco más grande */
+    line-height: 1.8; /* Espaciado entre líneas */
+    margin-top: 20px; /* Separación con el contenido superior */
+    border-top: 3px solid #ffd700; /* Línea decorativa dorada */
+}
+/* Footer */
+footer {
+    background-color: black; /* Fondo negro */
+    color: gold; /* Texto dorado */
+    text-align: center; /* Centrado horizontal */
+    padding: 20px 15px; /* Espaciado interno */
+    font-family: 'Arial', sans-serif; /* Fuente estándar */
+    font-size: 1.1em; /* Tamaño de texto claro */
+    line-height: 1.8; /* Espaciado entre líneas */
+    margin-top: 20px; /* Separación del contenido superior */
+    border-top: 3px solid gray; /* Línea decorativa superior */
+    display: flex; /* Flexbox para centrar */
+    flex-direction: column; /* Elementos en columna */
+    justify-content: center; /* Centrado vertical */
+    align-items: center; /* Centrado horizontal */
+}
+
+/* Párrafos del Footer */
+footer p {
+    margin: 10px 0; /* Espaciado entre párrafos */
+    color: gold; /* Asegura el color dorado */
+}
+
+/* Estilo de los enlaces del Footer */
+footer a {
+    color: white; /* Asegura el color
+    text-decoration: none;
+    font-weight: bold; /* Resalta los enlaces */
+    transition: color 0.3s ease; /* Efecto suave al pasar el cursor */
+}
+
+footer a:hover {
+    color: blue; /* Cambia a blanco al pasar el cursor */
+    text-decoration: underline; /* Subrayado al pasar el cursor */
 }
 
 /* Responsividad */
