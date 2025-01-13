@@ -5,21 +5,26 @@
     justify-content: space-between;
     align-items: center;
     padding: 20px;
+    max-width: 1200px; /* Define un ancho máximo */
+    margin: 0 auto; /* Centra el contenido en la pantalla */
 }
 
+/* Logo */
 .logo img {
-    max-width: 50%;
+    max-width: 150px; /* Tamaño fijo */
     height: auto;
 }
 
+/* Título */
 .tituloxd {
-    text-align: 0;
+    text-align: center; /* Centrar el texto */
     flex: 2;
 }
 
 .tituloxd h1 {
     color: #ffd700;
-    font-size: 2em;
+    font-size: 2.5em; /* Tamaño del texto mayor */
+    margin: 0;
 }
 
 .tituloxd p {
@@ -31,13 +36,13 @@
 .navegar ul {
     list-style: none;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Apila los botones */
     gap: 10px;
     padding: 0;
     margin: 0;
-        position: relative;
-        left: -50px; /* Mueve la columna hacia la izquierda */
-    
+    position: relative;
+    left: 0px;
+    text-align: center; /* Centrar el contenido */
 }
 
 .navegar ul li a {
@@ -97,7 +102,6 @@
     background-color: white; /* Cambia ligeramente el color al pasar el mouse */
 }
 
-
 /* Footer */
 footer {
     background-color: black;
@@ -109,7 +113,8 @@ footer {
 /* Responsividad */
 @media (max-width: 768px) {
     .headerprincipal {
-        flex-direction: column;
+        flex-direction: column; /* Coloca el contenido en columna */
+        align-items: center;
         text-align: center;
     }
 
@@ -121,5 +126,11 @@ footer {
 @media (max-width: 992px) {
     .servicios-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 992px) {
+    .headerprincipal {
+        justify-content: space-around; /* Espacio equilibrado en pantallas grandes */
     }
 }

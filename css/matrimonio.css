@@ -1,57 +1,51 @@
-/* Estilos globales */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f2f2f6; /* Fondo claro para diferenciar el contenido */
-    color: #333;
-    line-height: 1.6;
-}
-
 /* Cabecera */
 .headerprincipal {
-    background-color: rgb(9, 8, 8); /* Fondo negro */
+    background-color: rgb(9, 8, 8);
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    flex-wrap: wrap; /* Permite que los elementos se ajusten en pantallas pequeñas */
+    max-width: 1200px; /* Define un ancho máximo */
+    margin: 0 auto; /* Centra el contenido en la pantalla */
 }
 
+/* Logo */
 .logo img {
-    max-width: 50%;
+    max-width: 150px; /* Tamaño fijo */
     height: auto;
 }
 
+/* Título */
 .tituloxd {
-    text-align: 0;
+    text-align: center; /* Centrar el texto */
     flex: 2;
 }
 
 .tituloxd h1 {
-    color: #ffd700; /* Texto dorado */
-    font-size: 2em;
+    color: #ffd700;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2.5em; /* Tamaño del texto mayor */
+    margin: 0;
 }
 
-.tituloxd p {
-    color: #ffd700;
+.tituloxd h3 {
+    color: rgb(104, 100, 54);
     margin-top: 5px;
+    font-family: 'Playfair Display', serif;
+    text-transform: capitalize;
 }
 
 /* Navegación */
 .navegar ul {
     list-style: none;
     display: flex;
-    flex-direction: column; /* Los enlaces estarán en columna */
-    gap: 10px; /* Espacio entre enlaces */
+    flex-direction: column; /* Apila los botones */
+    gap: 10px;
     padding: 0;
     margin: 0;
     position: relative;
-    left: -50px; /* Ajusta los enlaces hacia la izquierda */
+    left: 0px;
+    text-align: center; /* Centrar el contenido */
 }
 
 .navegar ul li a {
@@ -65,50 +59,8 @@ body {
 }
 
 .navegar ul li a:hover {
-    background-color: rgb(255, 193, 7); /* Cambia el color de fondo al pasar el mouse */
-    color: black; /* Cambia el texto a negro al pasar el mouse */
-}
-
-/* Contenido de Notarías */
-section.content {
-    max-width: 1200px;
-    margin: 40px auto;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco con transparencia */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    position: relative;
-}
-
-/* Imagen de fondo */
-.image-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    background-size: cover;
-}
-
-.background-image {
-    width: 100%;
-    height: 100%;
-    opacity: 0.5; /* Controla la transparencia de la imagen */
-}
-
-/* Contenedor de texto */
-.text-container {
-    flex: 2;
-    padding: 20px;
-    text-align: left;
-    margin: 0 auto;
-    max-width: 600px;
-    position: relative;
-    z-index: 2;
+    background-color: rgb(255, 193, 7);
+    color: black;
 }
 
 /* Servicios */
@@ -118,7 +70,7 @@ section.content {
 
 .servicios-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Tres columnas */
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
 
@@ -128,7 +80,61 @@ section.content {
 
 .servicio:hover {
     transform: translateY(-10px);
-    transition: transform 0.3s ease;
+}
+
+/* Sección de contenido */
+.content {
+    padding: 20px;
+    background-color: #f9f9f9; /* Fondo gris claro */
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    max-width: 800px; /* Ancho máximo para centrar el contenido */
+    margin: 20px auto;
+}
+
+/* Estilo para los encabezados principales */
+h1, h2, h3 {
+    color: #141313; /* Amarillo dorado */
+    font-family: 'Arial', sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Encabezado principal */
+h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* Subtítulos */
+h2 {
+    font-size: 2em;
+    font-weight: bold;
+    margin-top: 20px;
+    border-bottom: 2px solid #0f0e0e; /* Línea decorativa */
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Textos */
+p, li {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #333; /* Gris oscuro */
+    margin: 10px 0;
+    text-align: justify; /* Justificación */
+}
+
+/* Lista numerada */
+ol {
+    padding-left: 20px; /* Sangría para el contenido */
+}
+
+ol li {
+    margin-bottom: 10px;
 }
 
 /* WhatsApp Icon */
@@ -153,55 +159,80 @@ section.content {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Sombra más intensa al pasar el mouse */
     background-color: white; /* Cambia ligeramente el color al pasar el mouse */
 }
-
-
 /* Footer */
 footer {
-    background-color: black;
-    color: gold;
-    text-align: center;
-    padding: 20px;
+    background-color: black; /* Fondo negro */
+    color: gold; /* Texto en dorado */
+    text-align: center; /* Centrado del contenido */
+    padding: 20px 15px; /* Espaciado interno */
+    font-family: 'Arial', sans-serif; /* Fuente estándar */
+    font-size: 1.1em; /* Tamaño de texto un poco más grande */
+    line-height: 1.8; /* Espaciado entre líneas */
+    margin-top: 20px; /* Separación con el contenido superior */
+    border-top: 3px solid gray; /* Línea decorativa dorada */
+}
+/* Footer */
+footer {
+    background-color: black; /* Fondo negro */
+    color: gold; /* Texto dorado */
+    text-align: center; /* Centrado horizontal */
+    padding: 20px 15px; /* Espaciado interno */
+    font-family: 'Arial', sans-serif; /* Fuente estándar */
+    font-size: 1.1em; /* Tamaño de texto claro */
+    line-height: 1.8; /* Espaciado entre líneas */
+    margin-top: 20px; /* Separación del contenido superior */
+    border-top: 3px solid gray; /* Línea decorativa superior */
+    display: flex; /* Flexbox para centrar */
+    flex-direction: column; /* Elementos en columna */
+    justify-content: center; /* Centrado vertical */
+    align-items: center; /* Centrado horizontal */
 }
 
+/* Párrafos del Footer */
 footer p {
-    margin: 5px 0;
+    margin: 10px 0; /* Espaciado entre párrafos */
+    color: gold; /* Asegura el color dorado */
 }
 
+/* Estilo de los enlaces del Footer */
 footer a {
-    color: #00aced;
+    color: blue; /* Color azul */
     text-decoration: none;
-    margin: 0 5px;
+    font-weight: bold; /* Resalta los enlaces */
+    transition: color 0.3s ease; /* Efecto suave al pasar el cursor */
 }
 
 footer a:hover {
-    text-decoration: underline;
+    color: white; /* Cambia a blanco al pasar el cursor */
+    text-decoration: underline; /* Subrayado al pasar el cursor */
 }
 
-footer p:last-child {
-    margin-bottom: 0;
-}
+
 
 /* Responsividad */
 @media (max-width: 768px) {
     .headerprincipal {
-        flex-direction: column;
+        flex-direction: column; /* Coloca el contenido en columna */
+        align-items: center;
         text-align: center;
     }
 
-    .navegar ul {
-        left: 0; /* Ajusta la posición en pantallas pequeñas */
-        align-items: center; /* Centra los enlaces */
-    }
-
     .servicios-grid {
-        grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+        grid-template-columns: 1fr;
     }
 }
 
 @media (max-width: 992px) {
     .servicios-grid {
-        grid-template-columns: repeat(2, 1fr); /* Dos columnas en pantallas medianas */
+        grid-template-columns: repeat(2, 1fr);
     }
 }
+
+@media (min-width: 992px) {
+    .headerprincipal {
+        justify-content: space-around; /* Espacio equilibrado en pantallas grandes */
+    }
+}
+
 
 
